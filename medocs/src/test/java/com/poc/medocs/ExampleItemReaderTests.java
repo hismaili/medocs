@@ -1,12 +1,12 @@
 package com.poc.medocs; 
 
-import com.poc.medocs.ExampleItemReader;
+import com.poc.medocs.batch.MedocsFileItemReader;
 
 import junit.framework.TestCase;
 
 public class ExampleItemReaderTests extends TestCase {
 
-	private ExampleItemReader reader = new ExampleItemReader();
+	private MedocsFileItemReader reader = new MedocsFileItemReader();
 	
 	public void testReadOnce() throws Exception {
 		assertEquals("Hello world!", reader.read());

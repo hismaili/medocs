@@ -19,8 +19,13 @@
 	</jdbc:initialize-database>
 
 	<batch:job-repository id="jobRepository" />
+	
+	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository"/>
+	</bean>
 
 	<import resource="classpath:/META-INF/spring/module-context.xml" />
+	<import resource="classpath:/META-INF/spring/medocs-datasource-context.xml" />
 
 
 
