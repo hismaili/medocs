@@ -51,13 +51,14 @@
 	</bean>
 	<bean id="persistenceAnnotation"
 		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<bean id="incrementer"
+		class="org.springframework.batch.core.launch.support.RunIdIncrementer" />
 
-
-	<batch:job id="job1">
+	<batch:job id="job1" incrementer="incrementer">
 		<batch:step id="step1">
 			<batch:tasklet transaction-manager="transactionManager">
 				<batch:chunk reader="reader" processor="processor"
-					writer="writer" commit-interval="1" />
+					writer="writer" commit-interval="100" />
 			</batch:tasklet>
 		</batch:step>
 	</batch:job>
