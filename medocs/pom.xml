@@ -48,6 +48,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.poc.medocs</groupId>
+			<artifactId>medocs-data</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.9</version>

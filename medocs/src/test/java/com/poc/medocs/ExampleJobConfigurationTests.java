@@ -1,7 +1,7 @@
 package com.poc.medocs;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,13 +16,12 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.batch.test.JobLauncherTestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.poc.medocs.dao.MedecineDescriptionDAO;
-import com.poc.medocs.entities.MedicineDescriptionBO;
+import com.medocs.medocsdata.dao.MedecineDescriptionDAO;
+import com.medocs.medocsdata.entities.MedicineDescriptionBO;
 
 @ContextConfiguration(locations={"/launch-context.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)

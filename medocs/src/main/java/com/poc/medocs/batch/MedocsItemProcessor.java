@@ -7,10 +7,10 @@ import org.apache.log4j.Logger;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
+import com.medocs.medocsdata.entities.MedecineDosageBO;
+import com.medocs.medocsdata.entities.MedecinePackagingBO;
+import com.medocs.medocsdata.entities.MedicineDescriptionBO;
 import com.poc.medocs.dto.MedicamentDTO;
-import com.poc.medocs.entities.MedecineDosageBO;
-import com.poc.medocs.entities.MedecinePackagingBO;
-import com.poc.medocs.entities.MedicineDescriptionBO;
 import com.poc.medocs.utils.DecimalUtils;
 
 /**
