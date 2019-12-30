@@ -1,0 +1,38 @@
+FRSIN01T
+
+get the active queue manager
+dspmq -a 
+
+==
+Vérifier l'état d'un queue manager
+dspmq -m ${QMgr}
+==============================
+Liste des queues créées pour un queue manager : 
+
+
+
+dump queue manager configuration : dmpmqcfg
+
+dmpmqcfg -m FRSIN01T -t queue|egrep "^DEFINE"
+
+dmpmqcfg -m FRSIN01T -t queue -n FRSIN01T.AP12606.SINDGCOM
+
+dmpmqcfg -m FRSIN01T -t channel|egrep "^DEFINE"
+
+dmpmqcfg -m FRSIN01T -t qmgr
+
+==== Envoi d'un message sur une file
+mqputmsg -m FRSIN01T -q FRSIN01T.AP12606.SINDGCOM -f /apps/mgbdev01/batch/logs/msgTestMQ.txt
+
+
+
+amqsput FRSIN01T.AP12606.SINDGCOM FRSIN01T
+
+amqsbcg FRSIN01T.AP12606.SINDGCOM FRSIN01T
+
+mqbrowse -m FRSIN01T -q FRSIN01T.AP12606.SINDGCOM
+
+
+DEFINE QALIAS('AP12606.RMPTOSINOV') +
+DEFINE QALIAS('AP12606.SINDGCOM') +
+DEFINE QALIAS('AP12606.SINOVOUTBOUND') +

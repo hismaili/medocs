@@ -1,0 +1,5 @@
+genérer archetype maven en local :
+	mvn archetype:generate  -DarchetypeGroupId=com.bnpparibas.dsibddf -DarchetypeArtifactId=MicroService-archetype  -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=com.bnpp.monetique.smcapi   -DartifactId=apismccore
+
+Import certificats dans le jdk : mot de passe par défaut (changeit)
+	keytool -import -alias nexus-cert -keystore  C:\Program Files\java\jdk1.8.0_92\jre\lib\security\cacerts -file nexus-bddf.cer 
